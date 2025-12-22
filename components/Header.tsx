@@ -1,18 +1,21 @@
 import Link from 'next/link';
 
+// src/components/Header.tsx
 export default function Header() {
   return (
-    <header className="fixed top-0 w-full z-50 bg-white/30 backdrop-blur-md border-b border-white/20 grayscale hover:grayscale-0 transition-all duration-500">
+    <header className="fixed top-0 w-full z-50 bg-white/40 backdrop-blur-md border-b border-black/5 grayscale">
       <nav className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold tracking-tighter uppercase">
-          Jute<span className="text-stone-500">Bay</span>
+        {/* Changed text-black for visibility */}
+        <Link href="/" className="text-2xl font-bold tracking-tighter uppercase text-black">
+          Jute<span className="text-stone-600">Bay</span>
         </Link>
-        <div className="hidden md:flex space-x-8 text-xs font-semibold uppercase tracking-[0.2em]">
-          <Link href="/" className="hover:text-stone-500 transition">Home</Link>
-          <Link href="/shop" className="hover:text-stone-500 transition">Shop</Link>
-          <Link href="/about" className="hover:text-stone-500 transition">About</Link>
-          <Link href="/contact" className="hover:text-stone-500 transition">Contact</Link>
-          <Link href="/feedback" className="hover:text-stone-500 transition">Feedback</Link>
+        {/* Changed text-stone-800 for visibility */}
+        <div className="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-[0.2em] text-stone-800">
+          <Link href="/" className="hover:text-black transition">Home</Link>
+          <Link href="/shop" className="hover:text-black transition">Shop</Link>
+          <Link href="/about" className="hover:text-black transition">About</Link>
+          <Link href="/contact" className="hover:text-black transition">Contact</Link>
+          <Link href="/feedback" className="hover:text-black transition">Feedback</Link>
         </div>
       </nav>
     </header>

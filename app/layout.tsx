@@ -1,15 +1,6 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "JuteBay | Sustainable Luxury UAE",
-  description: "Premium handcrafted jute bags delivered across the Emirates.",
-};
+import './globals.css';
+import Header from '@/components/Header';
+import Image from 'next/image';
 
 export default function RootLayout({
   children,
@@ -18,10 +9,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-stone-50 text-stone-900`}>
+      <body className="relative min-h-screen">
+        {/* SHARED BACKGROUND - Visible on all pages */}
+        <div className="fixed inset-0 z-0">
+          <Image 
+            src="/jute-texture.png" 
+            alt="Jute Texture Background" 
+            fill 
+            className="object-cover opacity-70" 
+            priority
+          />
+          {/* Subtle overlay to ensure text is readable on every page */}
+          <div className="absolute inset-0 bg-stone-900/5" />
+        </div>
+
+        {/* HEADER - Stays at the top */}
         <Header />
-        {children}
-        <Footer />
+
+        {/* PAGE CONTENT - Renders over the background */}
+        <div className="relative z-10">
+          {children}
+        </div>
       </body>
     </html>
   );

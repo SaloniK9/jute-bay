@@ -5,7 +5,7 @@ export default function About() {
         <div className="aspect-[3/4] bg-stone-200 rounded-2xl overflow-hidden grayscale">
            {/* Replace with Founder Image */}
            <div className="w-full h-full flex items-center justify-center text-stone-400 italic">
-             Founder: Saloni K.
+             Founder: Atharva Dhobale
            </div>
         </div>
         <div>

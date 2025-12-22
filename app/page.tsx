@@ -1,57 +1,85 @@
 "use client";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
-  const bags = [1, 2, 3, 4, 5, 6]; // Representing your bag items
+  const bags = [
+    { id: 1, src: "/bag1.png", alt: "Tote Bag" },
+    { id: 2, src: "/bag2.png", alt: "Clutch" },
+    { id: 3, src: "/bag3.png", alt: "Eco Shopper" },
+    { id: 4, src: "/bag4.png", alt: "Handbag" },
+    { id: 5, src: "/bag5.png", alt: "Beach Bag" },
+    { id: 6, src: "/bag6.png", alt: "Classic Jute" },
+  ];
 
   return (
-    <main className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden">
-      {/* Background Text Graphic */}
-      <motion.div 
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-        className="z-10 text-center"
-      >
-        <h1 className="text-7xl md:text-9xl font-black uppercase tracking-tighter text-stone-800">
-          JuteBay
-        </h1>
-        <p className="text-stone-500 tracking-[0.5em] uppercase text-sm mt-2">Dubai • Abu Dhabi • Sharjah</p>
-        
-        <Link href="/shop">
-          <motion.button 
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-12 px-10 py-4 bg-stone-900 text-white text-sm font-bold uppercase tracking-widest rounded-full shadow-2xl"
-          >
-            Start Shopping
-          </motion.button>
-        </Link>
-      </motion.div>
+    <main className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-transparent">
+      
+      {/* 1. BACKGROUND TEXTURE (Low opacity, no grayscale) */}
+      <div className="absolute inset-0 z-0">
+        <Image 
+          src="/jute-texture.png" 
+          alt="Jute Texture" 
+          fill 
+          className="object-cover opacity-80" 
+          priority
+        />
+      </div>
 
-      {/* Circular Animated Popups */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="relative w-full h-full max-w-[600px] max-h-[600px] animate-spin-slow">
+      {/* 2. CIRCULAR BAGS (Surrounding the name) */}
+      {/* We set a large radius (350px) to ensure they go around the central card */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
+        <motion.div 
+          animate={{ rotate: 360 }}
+          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+          className="relative w-[700px] h-[700px] flex items-center justify-center"
+        >
           {bags.map((bag, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: i * 0.2 }}
-              className="absolute w-20 h-20 md:w-32 md:h-32 bg-stone-200 rounded-full border-2 border-white shadow-lg overflow-hidden flex items-center justify-center text-[10px] font-bold text-stone-400"
+            <div
+              key={bag.id}
+              className="absolute w-28 h-28 md:w-36 md:h-36 bg-white rounded-full border-2 border-stone-200 shadow-xl overflow-hidden pointer-events-auto"
               style={{
+                // Math to place them in a circle around the center
                 top: "50%",
                 left: "50%",
-                transform: `rotate(${i * 60}deg) translate(250px) rotate(-${i * 60}deg)`,
+                transform: `
+                  translate(-50%, -50%) 
+                  rotate(${i * (360 / bags.length)}deg) 
+                  translateY(-320px) 
+                  rotate(-${i * (360 / bags.length)}deg)
+                `,
               }}
             >
-              {/* Replace with <img src={`/bag-${bag}.jpg`} /> later */}
-              BAG {bag}
-            </motion.div>
+              <img 
+                src={bag.src} 
+                className="w-full h-full object-cover"
+                onError={(e) => { e.currentTarget.src = "https://via.placeholder.com/150?text=Bag"; }}
+              />
+            </div>
           ))}
-        </div>
+        </motion.div>
       </div>
+
+      {/* 3. CENTER CARD (Very transparent to show BG) */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="z-20 text-center bg-white/10 backdrop-blur-md p-12 rounded-[40px] border border-white/30 shadow-2xl max-w-2xl"
+      >
+        <h1 className="text-8xl md:text-9xl font-black uppercase tracking-tighter text-stone-900 leading-none">
+          Jute<span className="text-stone-600">Bay</span>
+        </h1>
+        <p className="text-stone-800 tracking-[0.4em] uppercase text-sm mt-6 font-bold">
+          Luxury Sustainability • UAE
+        </p>
+        
+        <Link href="/shop">
+          <button className="mt-10 px-12 py-4 bg-stone-900 text-white text-sm font-bold uppercase tracking-widest rounded-full hover:bg-black transition-all">
+            Start Shopping
+          </button>
+        </Link>
+      </motion.div>
     </main>
   );
 }
