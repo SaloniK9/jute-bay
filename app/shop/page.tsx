@@ -19,7 +19,7 @@ export default function Shop() {
               [Bag Image]
             </div>
             <h3 className="font-bold text-lg">{product.name}</h3>
-            <p className="text-stone-500">{product.price}</p>
+            <p className="text-stone-200">{product.price}</p>
           </div>
         ))}
       </div>

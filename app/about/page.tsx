@@ -10,11 +10,11 @@ export default function About() {
         </div>
         <div>
           <h2 className="text-4xl font-bold mb-6 italic">The Visionary Behind JuteBay</h2>
-          <p className="text-stone-600 leading-relaxed mb-4">
+          <p className="text-stone-200 leading-relaxed mb-4">
             Founded by <strong>Atharva Dhobale</strong>, JuteBay was born out of a desire to merge the rugged, 
             earthy texture of natural jute with the high-fashion sensibilities of the UAE.
           </p>
-          <p className="text-stone-600 leading-relaxed">
+          <p className="text-stone-200 leading-relaxed">
             Our mission is to provide an eco-friendly alternative to plastic and synthetic materials 
             without compromising on the luxury aesthetic that the Middle East is known for.
           </p>

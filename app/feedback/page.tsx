@@ -10,9 +10,9 @@ export default function Feedback() {
       <div className="space-y-12">
         {reviews.map((rev, i) => (
           <div key={i} className="border-b border-stone-200 pb-8">
-            <p className="text-2xl italic text-stone-700 mb-4">"{rev.comment}"</p>
+            <p className="text-2xl italic text-stone-300 mb-4">"{rev.comment}"</p>
             <p className="font-bold">{rev.name}</p>
-            <p className="text-stone-400 text-sm uppercase">{rev.city}</p>
+            <p className="text-stone-300 text-sm uppercase">{rev.city}</p>
           </div>
         ))}
       </div>
