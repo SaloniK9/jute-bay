@@ -9,9 +9,9 @@ export default function About() {
            </div>
         </div>
         <div>
-          <h2 className="text-4xl font-bold mb-6 italic">The Visionary Behind JuteBay</h2>
+          <h2 className="text-4xl font-bold mb-6 italic">The Visionary Behind TrueCarry</h2>
           <p className="text-stone-200 leading-relaxed mb-4">
-            Founded by <strong>Atharva Dhobale</strong>, JuteBay was born out of a desire to merge the rugged, 
+            Founded by <strong>Atharva Dhobale</strong>, TrueCarry was born out of a desire to merge the rugged, 
             earthy texture of natural jute with the high-fashion sensibilities of the UAE.
           </p>
           <p className="text-stone-200 leading-relaxed">

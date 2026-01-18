@@ -65,10 +65,10 @@ export default function Home() {
       <motion.div 
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="z-20 text-center bg-white/10 backdrop-blur-md p-12 rounded-[40px] border border-white/30 shadow-2xl max-w-2xl"
+        className="z-20 text-center bg-white/10 backdrop-blur-md p-12 rounded-[40px] border border-white/30 shadow-2xl max-w-5xl"
       >
         <h1 className="text-8xl md:text-9xl font-black uppercase tracking-tighter text-stone-900 leading-none">
-          Jute<span className="text-stone-600">Bay</span>
+          True<span className="text-stone-600">Carry</span>
         </h1>
         <p className="text-stone-800 tracking-[0.4em] uppercase text-sm mt-6 font-bold">
           Luxury Sustainability • UAE

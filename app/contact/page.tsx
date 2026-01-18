@@ -11,7 +11,7 @@ export default function Contact() {
           <div>
             <h3 className="text-xl font-bold mb-2">Our Founder</h3>
             <p className="text-stone-300">Atharva Dhobale</p>
-            <p className="text-stone-300 text-sm">atharvad@jutebay.com</p>
+            <p className="text-stone-300 text-sm">atharvad@truecarry.com</p>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-2">Office</h3>
@@ -19,7 +19,7 @@ export default function Contact() {
           </div>
           <div>
             <h3 className="text-xl font-bold mb-2">Wholesale Inquiries</h3>
-            <p className="text-stone-300">sales@jutebay.com</p>
+            <p className="text-stone-300">sales@truecarry.com</p>
           </div>
         </div>
 
