@@ -55,19 +55,19 @@ export default function CollectionPage() {
           {/* SPECIFICATIONS GRID - Now inside the card */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12 pt-10 border-t border-stone-200">
             <div className="text-center">
-              <h4 className="text-xs font-black uppercase text-stone-500 tracking-tighter mb-2">Size [cite: 13]</h4>
+              <h4 className="text-xs font-black uppercase text-stone-500 tracking-tighter mb-2">Size </h4>
               <p className="text-lg font-bold text-black">12" x 12" x 5" </p>
             </div>
             <div className="text-center">
-              <h4 className="text-xs font-black uppercase text-stone-500 tracking-tighter mb-2">Fabric [cite: 13]</h4>
+              <h4 className="text-xs font-black uppercase text-stone-500 tracking-tighter mb-2">Fabric </h4>
               <p className="text-lg font-bold text-black">Laminated Jute </p>
             </div>
             <div className="text-center">
-              <h4 className="text-xs font-black uppercase text-stone-500 tracking-tighter mb-2">Color [cite: 13]</h4>
+              <h4 className="text-xs font-black uppercase text-stone-500 tracking-tighter mb-2">Color </h4>
               <p className="text-lg font-bold text-black">Natural Printed </p>
             </div>
             <div className="text-center">
-              <h4 className="text-xs font-black uppercase text-stone-500 tracking-tighter mb-2">Handle [cite: 13]</h4>
+              <h4 className="text-xs font-black uppercase text-stone-500 tracking-tighter mb-2">Handle </h4>
               <p className="text-lg font-bold text-black">Padded Handle </p>
             </div>
           </div>
