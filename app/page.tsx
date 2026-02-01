@@ -76,12 +76,12 @@ export default function Home() {
           </h1>
           
           <p className="text-stone-800 tracking-[0.3em] uppercase text-[10px] md:text-xs mt-6 md:mt-10 font-bold opacity-80">
-            Luxury Sustainability • UAE
+            Luxury Sustainability. UAE
           </p>
           
           <Link href="/shop">
             <button className="mt-10 px-10 py-4 bg-stone-900 text-white text-[10px] md:text-xs font-bold uppercase tracking-widest rounded-full hover:bg-black transition-all shadow-lg">
-              Start Shopping
+              View Collection
             </button>
           </Link>
         </motion.div>
